@@ -1,5 +1,8 @@
 sample () {
-  echo sandy
-  }
+  echo function no of Arguments = $#
+  return
+  echo function input = $*
+}
 
-  sample
+ sample Hello World
+

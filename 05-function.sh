@@ -5,4 +5,3 @@ sample () {
 }
 
  sample Hello World
-

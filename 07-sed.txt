@@ -1,0 +1,11 @@
+operation :
+----
+
+ 1. search and replace
+ 2. Delete the lines
+ 3. Add Your lines
+ 4. Replace the lines
+
+sed is an editor
+Assume we have a file like this
+

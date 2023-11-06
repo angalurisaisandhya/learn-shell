@@ -1,0 +1,5 @@
+sample () {
+  echo sandy
+  }
+
+  sample

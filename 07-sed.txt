@@ -9,27 +9,39 @@ operation :
 sed is an editor
 Assume we have a file like this
 
-sed 's /nologin/yeslogin/' file
-cat file
-sed -i 's /nologin/yeslogin' file
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
 
-Replace root with admin
+sed 's/ nologin/yeslogin/' file
+s is used to substitute
+
+sed -i 's/nologin/yeslogin/' file is used to modify file
+
+To replace root with admin use
 sed 's/root/admin/' file
 
+for global across line use
 sed 's/root/admin/g' file
 
-delete the lines
- 1. line no: sed '2d' file
- 2. search a word and delete those lines
-    ex: sed '/nologin/ d' file
+Delete lines can happen in two ways
+1. line no. --- sed '2d' file
+2. search a word and delete --- sed '/yeslogin/d' file
 
-add your lines
+add your lines by using
 sed '1 a hello world' file
 sed '/bash/ a hello world' file
 
-Replace lines
-sed '1 c hello world' file
-sed '/bash/ c hello world' file
+replace lines by
+sed '1 c Hello wolrld' file
+sed '/bash/ c Hello world' file
 
+sed -e '1d' -e '2 a Hello world' file
 -e is used for multiple operations to be enabled with a single sed command
+
+
+
+
+
 
